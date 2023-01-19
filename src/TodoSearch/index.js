@@ -3,12 +3,11 @@ import "./TodoSearch.css";
 import { TodoContext } from "../TodoContext";
 
 function TodoSearch() {
+  const { searchValue, setSearchValue } = React.useContext(TodoContext);
 
-  const { searchValue, setSearchValue} = React.useContext(TodoContext);
-  
   const onSearchValueChange = (event) => {
-  console.log(event.target.value);
-  setSearchValue(event.target.value);
+    console.log(event.target.value);
+    setSearchValue(event.target.value);
   };
 
   return [
@@ -17,7 +16,7 @@ function TodoSearch() {
       placeholder="Cebolla"
       value={searchValue}
       onChange={onSearchValueChange}
-    />
+    />,
   ];
 }
 
