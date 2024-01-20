@@ -24,7 +24,6 @@ function HomePage() {
     completedTodos,
     searchValue,
     setSearchValue,
-    // addTodo,
     sincronizeTodos,
   } = useTodos();
 
@@ -63,7 +62,11 @@ function HomePage() {
             key={todo.id}
             text={todo.text}
             completed={todo.completed}
-            onEdit={() => navigate(`/edit/${todo.id}`)}
+            onEdit={() => {
+              navigate(`/edit/${todo.id}`, {
+                state: { todo },
+              });
+            }}
             onComplete={() => completeTodo(todo.id)}
             onDelete={() => deleteTodo(todo.id)}
           />
