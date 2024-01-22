@@ -15,7 +15,7 @@ function TodoSearch({ searchValue, setSearchValue, params, setParams }) {
   return (
     <input
       className="TodoSearch"
-      placeholder="Cebolla"
+      placeholder="Onion"
       value={searchValue}
       onChange={onSearchValueChange}
       // disabled={loading}

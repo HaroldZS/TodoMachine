@@ -51,7 +51,7 @@ function HomePage() {
         onLoading={() => <TodosLoading />}
         onEmptyTodos={() => <EmptyTodos />}
         onEmptySearchResults={(searchText) => (
-          <p>No hay resultados para {searchText}</p>
+          <p>There are no results for {searchText}</p>
         )}
         // render={(todo) => (
         //   <TodoItem

@@ -2,7 +2,7 @@ import React from "react";
 import { useStorageListener } from "./useStorageListener";
 import "./ChangeAlert.css";
 
-function ChangeAlert({sincronize}) {
+function ChangeAlert({ sincronize }) {
   const { show, toggleShow } = useStorageListener(sincronize);
 
   if (show) {
@@ -10,10 +10,10 @@ function ChangeAlert({sincronize}) {
       <div className="ChangeAlert-bg">
         <div className="ChangeAlert-container">
           <p>
-            Parece que cambiaste tus TODOs en otra pestaña o ventana del
-            navegador.
+            It seems like you change your TODOs in another tab or window of the
+            browser.
           </p>
-          <p>¿Quieres sincronizar tus TODOs?</p>
+          <p>Do you want to sync your TODOs?</p>
           <button
             className="TodoForm-button TodoForm-button--add"
             onClick={toggleShow}
